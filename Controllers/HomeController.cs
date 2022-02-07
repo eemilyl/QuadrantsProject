@@ -9,16 +9,20 @@ using System.Threading.Tasks;
 
 namespace QuadrantsProject.Controllers
 {
+
     public class HomeController : Controller
     {
+        private QuadrantApplicationContext QuadrantContext { get; set; }
 
-        public HomeController()
+        public HomeController(QuadrantApplicationContext x)
         {
+            QuadrantContext = x;
         }
 
         public IActionResult Index()
         {
             return View();
         }
+
     }
 }
