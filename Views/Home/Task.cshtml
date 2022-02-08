@@ -19,14 +19,19 @@
 
         <label asp-for="Quadrant">Quadrant:</label>
         <select asp-for="Quadrant">
-            <option value="1"> Quadrant 1</</option>
-            <option value="2">Quadrant 2</</option>
-            <option value="3">Quadrant 3</</option>
-            <option value="4">Quadrant 4</</option>
+            <option value="1"> Quadrant 1: Important / Urgent</</option>
+            <option value="2"> Quadrant 2: Important / Not Urgent</</option>
+            <option value="3"> Quadrant 3: Not Important / Urgent</</option>
+            <option value="4"> Quadrant 4: Not Important / Not Urgent</</option>
         </select> <br />
 
         <label asp-for="Category">Category:</label>
-        <input asp-for="Category" /> <br />
+        <select asp-for="Category">
+            <option value="Home"> Home</</option>
+            <option value="School"> School</</option>
+            <option value="Work"> Work</</option>
+            <option value="Church"> Church</</option>
+        </select> <br />
 
         <label asp-for="Completed"></label>
         <select asp-for="Completed">
