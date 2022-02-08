@@ -17,19 +17,13 @@
                 @foreach (var x in Model)
                 {
                     @if (x.Quadrant == 1)
-                    { 
+                    {
                         <tr>
-                            <td>@x.Category.CategoryName</td>
                             <td>@x.Task</td>
                             <td>@x.DueDate</td>
-                            <td>@x.Quadrant</td>
-                            <td>@x.Completed</td>
-
-
-
                             <td><a asp-controller="Home" asp-action="Edit" asp-route-taskid="@x.TaskID">Edit</a></td>
                             <td><a asp-controller="Home" asp-action="Delete" asp-route-applicationid="@x.TaskID">Delete</a></td>
-
+                            <br />
                         </tr>
                     }
                 }
@@ -45,21 +39,17 @@
                     @if (x.Quadrant == 2)
                     {
                         <tr>
-                            <td>@x.Category.CategoryName</td>
                             <td>@x.Task</td>
                             <td>@x.DueDate</td>
-                            <td>@x.Quadrant</td>
-                            <td>@x.Completed</td>
-
-
-
                             <td><a asp-controller="Home" asp-action="Edit" asp-route-taskid="@x.TaskID">Edit</a></td>
                             <td><a asp-controller="Home" asp-action="Delete" asp-route-applicationid="@x.TaskID">Delete</a></td>
-
+                            <br />
                         </tr>
                     }
                 }
+                <br />
             </div>
+            <br />
         </div>
 
         <br />
@@ -75,17 +65,11 @@
                     @if (x.Quadrant == 3)
                     {
                         <tr>
-                            <td>@x.Category.CategoryName</td>
                             <td>@x.Task</td>
                             <td>@x.DueDate</td>
-                            <td>@x.Quadrant</td>
-                            <td>@x.Completed</td>
-
-
-
                             <td><a asp-controller="Home" asp-action="Edit" asp-route-taskid="@x.TaskID">Edit</a></td>
                             <td><a asp-controller="Home" asp-action="Delete" asp-route-applicationid="@x.TaskID">Delete</a></td>
-
+                            <br />
                         </tr>
                     }
                 }
@@ -101,17 +85,11 @@
                     @if (x.Quadrant == 4)
                     {
                         <tr>
-                            <td>@x.Category.CategoryName</td>
                             <td>@x.Task</td>
                             <td>@x.DueDate</td>
-                            <td>@x.Quadrant</td>
-                            <td>@x.Completed</td>
-
-
-
                             <td><a asp-controller="Home" asp-action="Edit" asp-route-taskid="@x.TaskID">Edit</a></td>
                             <td><a asp-controller="Home" asp-action="Delete" asp-route-applicationid="@x.TaskID">Delete</a></td>
-
+                            <br />
                         </tr>
                     }
                 }
