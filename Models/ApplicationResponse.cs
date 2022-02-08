@@ -8,7 +8,7 @@ namespace QuadrantsProject.Models
     {
         [Required]
         [Key]
-        private int TaskID { get; set; }
+        public int TaskID { get; set; }
 
         [Required]
         public string Task { get; set; }
