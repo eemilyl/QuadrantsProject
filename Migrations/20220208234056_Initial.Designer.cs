@@ -8,7 +8,7 @@ using QuadrantsProject.Models;
 namespace QuadrantsProject.Migrations
 {
     [DbContext(typeof(QuadrantApplicationContext))]
-    [Migration("20220208231710_Initial")]
+    [Migration("20220208234056_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
