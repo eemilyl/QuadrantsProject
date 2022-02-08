@@ -1,43 +1,62 @@
 ﻿@{
     ViewData["Title"] = "Quadrants";
 }
-@model QuadrantsProject.Models.ApplicationResponse
+@model List<ApplicationResponse>
 <!-- Display tasks-->
-<div>
+<div class="container">
+
     <h1> Stephen Covey's Time Management Matrix </h1>
     <br />
-    <p> Quadrant I: Important / Urgent </p>
-    <br />
-    <p> Quadrant II: Important / Not Urgent </p>
-    <br />
-    <p> Quadrant III: Not Important / Urgent </p>
-    <br />
-    <p> Quadrant IV: Not Important / Not Urgent </p>
+    <div class="row">
+        <br />
 
+        <div class="col-4">
+            <h5> Quadrant I: Important / Urgent </h5>
+            <br />
+        </div>
+
+        <div class="col-8">
+            <h5> Quadrant II: Important / Not Urgent </h5>
+            <br />
+        </div>
+
+        <br />
+        <br />
+        <br />
+
+        <div class="col-4">
+            <h5> Quadrant III: Not Important / Urgent </h5>
+        </div>
+
+        <div class="col-8">
+            <h5> Quadrant IV: Not Important / Not Urgent </h5> 
+        </div>
+
+    </div>
 </div>
 
 
 <table class="table table-bordered table-striped">
 
 
-    @*<tbody>
-        @foreach (var x in Model)
-        {
-            <tr>
-                <td>@x.Category.CategoryName</td>
-                <td>@x.Task</td>
-                <td>@x.DueDate</td>
-                <td>@x.Quadrant</td>
-                <td>@x.Completed</td>
+<tbody>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Category.CategoryName</td>
+            <td>@x.Task</td>
+            <td>@x.DueDate</td>
+            <td>@x.Quadrant</td>
+            <td>@x.Completed</td>
 
 
 
-                <td><a asp-controller="Home" asp-action="Edit" asp-route-movieid="@x.MovieID">Edit</a></td>
-                <td><a asp-controller="Home" asp-action="Delete" asp-route-applicationid="@x.MovieID">Delete</a></td>
+            <td><a asp-controller="Home" asp-action="Edit" asp-route-movieid="@x.TaskID">Edit</a></td>
+            <td><a asp-controller="Home" asp-action="Delete" asp-route-applicationid="@x.TaskID">Delete</a></td>
 
-            </tr>
+        </tr>
 
-        }*@
-    @*</tbody>*@
+    }
+</tbody>
 
 </table>
