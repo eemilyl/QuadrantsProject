@@ -23,6 +23,12 @@ namespace QuadrantsProject.Controllers
         {
             return View();
         }
+        // for the form 
+        [HttpGet]
+        public IActionResult Task()
+        {
+            return View();
+        }
 
     }
 }
