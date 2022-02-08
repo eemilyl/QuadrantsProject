@@ -1,10 +1,12 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
+
 namespace QuadrantsProject.Models
 {
-    public class EmptyClass
+    public class QuadrantApplicationContext: DbContext
     {
         //constructor
-        public QuadrantApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
+        public QuadrantApplicationContext(DbContextOptions<QuadrantApplicationContext> options) : base(options)
         {
             //leave blank
         }
