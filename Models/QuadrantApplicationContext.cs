@@ -29,7 +29,7 @@ namespace QuadrantsProject.Models
                      CategoryID = 1,
                      Task = "dishes",
                      DueDate = "tomorrow",
-                     Quadrant = "Urgent",
+                     Quadrant = 1,
                      Completed = false
 
                  },
@@ -39,7 +39,7 @@ namespace QuadrantsProject.Models
                      CategoryID = 1,
                      Task = "take out trash",
                      DueDate = "tomorrow",
-                     Quadrant = "Urgent",
+                     Quadrant = 2,
                      Completed = false
 
                  },
@@ -49,7 +49,7 @@ namespace QuadrantsProject.Models
                      CategoryID = 1,
                      Task = "clean",
                      DueDate = "tomorrow",
-                     Quadrant = "Urgent",
+                     Quadrant = 3,
                      Completed = false
                  }
                  );

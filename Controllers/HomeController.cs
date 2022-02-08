@@ -50,7 +50,7 @@ namespace QuadrantsProject.Controllers
         {
             ViewBag.Categories = QuadrantContext.Categories.ToList();
             var task = QuadrantContext.Responses.Single(x => x.TaskID == taskid);
-            return RedirectToAction("Task");
+            return RedirectToAction("Task", task);
         }
         [HttpPost]
         public IActionResult Edit (ApplicationResponse ap)
@@ -58,6 +58,10 @@ namespace QuadrantsProject.Controllers
             QuadrantContext.Update(ap);
             QuadrantContext.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public IActionResult Delete ()
+        {
+            return View();
         }
 
 

@@ -30,9 +30,8 @@ namespace QuadrantsProject.Migrations
                     b.Property<string>("DueDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Quadrant")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Quadrant")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Task")
                         .IsRequired()
@@ -51,7 +50,7 @@ namespace QuadrantsProject.Migrations
                             CategoryID = 1,
                             Completed = false,
                             DueDate = "tomorrow",
-                            Quadrant = "Urgent",
+                            Quadrant = 1,
                             Task = "dishes"
                         },
                         new
@@ -60,7 +59,7 @@ namespace QuadrantsProject.Migrations
                             CategoryID = 1,
                             Completed = false,
                             DueDate = "tomorrow",
-                            Quadrant = "Urgent",
+                            Quadrant = 2,
                             Task = "take out trash"
                         },
                         new
@@ -69,7 +68,7 @@ namespace QuadrantsProject.Migrations
                             CategoryID = 1,
                             Completed = false,
                             DueDate = "tomorrow",
-                            Quadrant = "Urgent",
+                            Quadrant = 3,
                             Task = "clean"
                         });
                 });

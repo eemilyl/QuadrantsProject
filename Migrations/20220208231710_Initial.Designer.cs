@@ -8,7 +8,7 @@ using QuadrantsProject.Models;
 namespace QuadrantsProject.Migrations
 {
     [DbContext(typeof(QuadrantApplicationContext))]
-    [Migration("20220208031326_Initial")]
+    [Migration("20220208231710_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,9 +32,8 @@ namespace QuadrantsProject.Migrations
                     b.Property<string>("DueDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Quadrant")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Quadrant")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Task")
                         .IsRequired()
@@ -53,7 +52,7 @@ namespace QuadrantsProject.Migrations
                             CategoryID = 1,
                             Completed = false,
                             DueDate = "tomorrow",
-                            Quadrant = "Urgent",
+                            Quadrant = 1,
                             Task = "dishes"
                         },
                         new
@@ -62,7 +61,7 @@ namespace QuadrantsProject.Migrations
                             CategoryID = 1,
                             Completed = false,
                             DueDate = "tomorrow",
-                            Quadrant = "Urgent",
+                            Quadrant = 2,
                             Task = "take out trash"
                         },
                         new
@@ -71,7 +70,7 @@ namespace QuadrantsProject.Migrations
                             CategoryID = 1,
                             Completed = false,
                             DueDate = "tomorrow",
-                            Quadrant = "Urgent",
+                            Quadrant = 3,
                             Task = "clean"
                         });
                 });

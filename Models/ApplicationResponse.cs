@@ -16,7 +16,7 @@ namespace QuadrantsProject.Models
         public string DueDate { get; set; }
 
         [Required]
-        public string Quadrant { get; set; }
+        public int Quadrant { get; set; }
 
         public bool Completed { get; set; }
 

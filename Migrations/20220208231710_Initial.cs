@@ -27,7 +27,7 @@ namespace QuadrantsProject.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Task = table.Column<string>(nullable: false),
                     DueDate = table.Column<string>(nullable: true),
-                    Quadrant = table.Column<string>(nullable: false),
+                    Quadrant = table.Column<int>(nullable: false),
                     Completed = table.Column<bool>(nullable: false),
                     CategoryID = table.Column<int>(nullable: false)
                 },
@@ -65,17 +65,17 @@ namespace QuadrantsProject.Migrations
             migrationBuilder.InsertData(
                 table: "Responses",
                 columns: new[] { "TaskID", "CategoryID", "Completed", "DueDate", "Quadrant", "Task" },
-                values: new object[] { 1, 1, false, "tomorrow", "Urgent", "dishes" });
+                values: new object[] { 1, 1, false, "tomorrow", 1, "dishes" });
 
             migrationBuilder.InsertData(
                 table: "Responses",
                 columns: new[] { "TaskID", "CategoryID", "Completed", "DueDate", "Quadrant", "Task" },
-                values: new object[] { 2, 1, false, "tomorrow", "Urgent", "take out trash" });
+                values: new object[] { 2, 1, false, "tomorrow", 2, "take out trash" });
 
             migrationBuilder.InsertData(
                 table: "Responses",
                 columns: new[] { "TaskID", "CategoryID", "Completed", "DueDate", "Quadrant", "Task" },
-                values: new object[] { 3, 1, false, "tomorrow", "Urgent", "clean" });
+                values: new object[] { 3, 1, false, "tomorrow", 3, "clean" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Responses_CategoryID",
