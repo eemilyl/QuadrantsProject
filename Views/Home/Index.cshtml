@@ -39,11 +39,11 @@
 <table class="table table-bordered table-striped">
 
 
-@*<tbody>
+<tbody>
     @foreach (var x in Model)
     {
         <tr>
-            <td>@x.Category.CategoryName</td>
+            @*<td>@x.Category.CategoryName</td>*@
             <td>@x.Task</td>
             <td>@x.DueDate</td>
             <td>@x.Quadrant</td>
@@ -56,7 +56,7 @@
 
         </tr>
 
-    }*@
+    }
 </tbody>
 
 </table>
