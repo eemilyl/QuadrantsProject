@@ -26,7 +26,7 @@ namespace QuadrantsProject.Controllers
                .Include(x => x.Category)
                .Where(x => x.Completed == false)
                .ToList();
-            return View();
+            return View(applications);
         }
 
         // for the form 
@@ -41,7 +41,7 @@ namespace QuadrantsProject.Controllers
         {
             QuadrantContext.Add(ap);
             QuadrantContext.SaveChanges();
-            return RedirectToAction("Index");
+            return View("Confirmation");
         }
 
         // Edit Button 
@@ -53,9 +53,9 @@ namespace QuadrantsProject.Controllers
             return RedirectToAction("Task");
         }
         [HttpPost]
-        public IActionResult Edit (ApplicationResponse ar)
+        public IActionResult Edit (ApplicationResponse ap)
         {
-            QuadrantContext.Update(ar);
+            QuadrantContext.Update(ap);
             QuadrantContext.SaveChanges();
             return RedirectToAction("Index");
         }
