@@ -3,13 +3,9 @@
 }
 @model QuadrantsProject.Models.ApplicationResponse
 <!-- Display tasks-->
-<h1>@ViewData["Title"]</h1>
-<br />
-<br />
-<h2>Quadrants</h2>
-<br />
 <div>
     <h1> Stephen Covey's Time Management Matrix </h1>
+    <br />
     <p> Quadrant I: Important / Urgent </p>
     <br />
     <p> Quadrant II: Important / Not Urgent </p>
@@ -23,17 +19,6 @@
 
 <table class="table table-bordered table-striped">
 
-    <thead class="font-weight-bold">
-        <tr>
-
-            <td>Category</td>
-            <td>Task</td>
-            <td>Due Date </td>
-            <td>Quadrant</td>
-            <td>Completed</td>
-
-        </tr>
-    </thead>
 
     @*<tbody>
         @foreach (var x in Model)
@@ -50,9 +35,9 @@
                 <td><a asp-controller="Home" asp-action="Edit" asp-route-movieid="@x.MovieID">Edit</a></td>
                 <td><a asp-controller="Home" asp-action="Delete" asp-route-applicationid="@x.MovieID">Delete</a></td>
 
-            </tr>*@
+            </tr>
 
-        }
+        }*@
     </tbody>
 
 </table>
