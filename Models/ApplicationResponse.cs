@@ -21,7 +21,7 @@ namespace QuadrantsProject.Models
         public bool Completed { get; set; }
 
         //Build the foreign key relationship
-        public int CategoryId { get; set; }
+        public int CategoryID { get; set; }
 
         public Category Category { get; set; }
     }

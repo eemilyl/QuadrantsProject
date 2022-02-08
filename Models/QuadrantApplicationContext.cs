@@ -12,7 +12,7 @@ namespace QuadrantsProject.Models
         }
 
         public DbSet<ApplicationResponse> Responses { get; set; }
-        public DbSet<Category> Category { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
     }
 }

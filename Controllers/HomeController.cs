@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using QuadrantsProject.Models;
 using System;
@@ -28,7 +29,15 @@ namespace QuadrantsProject.Controllers
         [HttpGet]
         public IActionResult Task()
         {
+            ViewBag.Categories = QuadrantContext.Categories.ToList();
             return View();
+        }
+        [HttpPost]
+        public IActionResult Task(ApplicationResponse ap)
+        {
+            QuadrantContext.Add(ap);
+            QuadrantContext.SaveChanges();
+            return RedirectToAction("Index");
         }
 
     }
