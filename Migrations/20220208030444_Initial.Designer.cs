@@ -8,7 +8,7 @@ using QuadrantsProject.Models;
 namespace QuadrantsProject.Migrations
 {
     [DbContext(typeof(QuadrantApplicationContext))]
-    [Migration("20220208024003_Initial")]
+    [Migration("20220208030444_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -45,6 +45,35 @@ namespace QuadrantsProject.Migrations
                     b.HasIndex("CategoryID");
 
                     b.ToTable("Responses");
+
+                    b.HasData(
+                        new
+                        {
+                            TaskID = 1,
+                            CategoryID = 1,
+                            Completed = false,
+                            DueDate = "tomorrow",
+                            Quadrant = "Urgent",
+                            Task = "dishes"
+                        },
+                        new
+                        {
+                            TaskID = 2,
+                            CategoryID = 1,
+                            Completed = false,
+                            DueDate = "tomorrow",
+                            Quadrant = "Urgent",
+                            Task = "take out trash"
+                        },
+                        new
+                        {
+                            TaskID = 3,
+                            CategoryID = 1,
+                            Completed = false,
+                            DueDate = "tomorrow",
+                            Quadrant = "Urgent",
+                            Task = "clean"
+                        });
                 });
 
             modelBuilder.Entity("QuadrantsProject.Models.Category", b =>
@@ -59,6 +88,28 @@ namespace QuadrantsProject.Migrations
                     b.HasKey("CategoryID");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            CategoryID = 1,
+                            CategoryName = "Home"
+                        },
+                        new
+                        {
+                            CategoryID = 2,
+                            CategoryName = "Work"
+                        },
+                        new
+                        {
+                            CategoryID = 3,
+                            CategoryName = "School"
+                        },
+                        new
+                        {
+                            CategoryID = 4,
+                            CategoryName = "Church"
+                        });
                 });
 
             modelBuilder.Entity("QuadrantsProject.Models.ApplicationResponse", b =>

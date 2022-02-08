@@ -42,6 +42,41 @@ namespace QuadrantsProject.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Categories",
+                columns: new[] { "CategoryID", "CategoryName" },
+                values: new object[] { 1, "Home" });
+
+            migrationBuilder.InsertData(
+                table: "Categories",
+                columns: new[] { "CategoryID", "CategoryName" },
+                values: new object[] { 2, "Work" });
+
+            migrationBuilder.InsertData(
+                table: "Categories",
+                columns: new[] { "CategoryID", "CategoryName" },
+                values: new object[] { 3, "School" });
+
+            migrationBuilder.InsertData(
+                table: "Categories",
+                columns: new[] { "CategoryID", "CategoryName" },
+                values: new object[] { 4, "Church" });
+
+            migrationBuilder.InsertData(
+                table: "Responses",
+                columns: new[] { "TaskID", "CategoryID", "Completed", "DueDate", "Quadrant", "Task" },
+                values: new object[] { 1, 1, false, "tomorrow", "Urgent", "dishes" });
+
+            migrationBuilder.InsertData(
+                table: "Responses",
+                columns: new[] { "TaskID", "CategoryID", "Completed", "DueDate", "Quadrant", "Task" },
+                values: new object[] { 2, 1, false, "tomorrow", "Urgent", "take out trash" });
+
+            migrationBuilder.InsertData(
+                table: "Responses",
+                columns: new[] { "TaskID", "CategoryID", "Completed", "DueDate", "Quadrant", "Task" },
+                values: new object[] { 3, 1, false, "tomorrow", "Urgent", "clean" });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Responses_CategoryID",
                 table: "Responses",
