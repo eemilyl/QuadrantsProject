@@ -1,10 +1,58 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Quadrants";
 }
+@model QuadrantsProject.Models.ApplicationResponse
+<!-- Display tasks-->
+<h1>@ViewData["Title"]</h1>
+<br />
+<br />
+<h2>Quadrants</h2>
+<br />
+<div>
+    <h1> Stephen Covey's Time Management Matrix </h1>
+    <p> Quadrant I: Important / Urgent </p>
+    <br />
+    <p> Quadrant II: Important / Not Urgent </p>
+    <br />
+    <p> Quadrant III: Not Important / Urgent </p>
+    <br />
+    <p> Quadrant IV: Not Important / Not Urgent </p>
 
-@*Michael Piscione was here*@
+</div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <h2>Landon was here</h2>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<table class="table table-bordered table-striped">
+
+    <thead class="font-weight-bold">
+        <tr>
+
+            <td>Category</td>
+            <td>Task</td>
+            <td>Due Date </td>
+            <td>Quadrant</td>
+            <td>Completed</td>
+
+        </tr>
+    </thead>
+
+    @*<tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Category.CategoryName</td>
+                <td>@x.Task</td>
+                <td>@x.DueDate</td>
+                <td>@x.Quadrant</td>
+                <td>@x.Completed</td>
+
+
+
+                <td><a asp-controller="Home" asp-action="Edit" asp-route-movieid="@x.MovieID">Edit</a></td>
+                <td><a asp-controller="Home" asp-action="Delete" asp-route-applicationid="@x.MovieID">Delete</a></td>
+
+            </tr>*@
+
+        }
+    </tbody>
+
+</table>
