@@ -24,6 +24,11 @@ namespace QuadrantsProject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<QuadrantApplicationContext>(options =>
+            {
+                options.UseSqlite(Configuration["ConnectionStrings:QuadrantConnection"]);
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
