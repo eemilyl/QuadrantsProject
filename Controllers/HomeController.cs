@@ -59,11 +59,19 @@ namespace QuadrantsProject.Controllers
             QuadrantContext.SaveChanges();
             return RedirectToAction("Index");
         }
-        public IActionResult Delete ()
+        [HttpGet]
+        public IActionResult Delete (int taskid)
         {
-            return View();
+            var task = QuadrantContext.Responses.Single(x => x.TaskID == taskid);
+            return View(task);
         }
-
+        [HttpPost]
+        public IActionResult Delete(ApplicationResponse ap)
+        {
+            QuadrantContext.Responses.Remove(ap);
+            QuadrantContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
     }
 }
